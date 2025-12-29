@@ -1,0 +1,278 @@
+/**
+* sidebar 
+*/
+.sidebar {
+  z-index: 1000;
+  overflow-y: scroll;
+  position: fixed;
+  display: none;
+}
+
+.sidebar-display {
+  display: flex;
+}
+
+.menuBtn {
+  display: block;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/**
+* heading
+*/
+.cart__heading {
+  padding: 0 20px;
+  padding-top: 20px;
+  font-size: var(--fonts30);
+  font-weight: var(--fontw-semibold);
+}
+
+/**
+* cart items .div
+*/
+.cartItemsCheckout {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/*section*/
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*an item .div*/
+.cartItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/*item's infors and price .div*/
+.cartItemInfor{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/*item'cover container .div*/
+.cartItemImage {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+}
+
+/*img*/
+.cart__item__img {
+  object-fit: contain;
+}
+
+/*item's details*/
+.cartItemDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 500px;
+}
+
+.cart__item__name {
+  font-weight: var(--fontw-medium);
+  width: 100%;
+  max-height: 65px;
+  overflow: hidden;
+}
+
+/*quantity .div*/
+.cartItemQuantity {
+  display: flex;
+  align-items: center;
+  /* padding: 0 10px; */
+  border: var(--bd);
+  border-radius: var(--bdr);
+  width: fit-content;
+  height: 30px;
+}
+
+.quantityBtn {
+  font-weight: var(--fontw-semibold);
+}
+
+.quantity__input {
+  width: 50px;
+  text-align: center;
+  font-weight: var(--fontw-semibold);
+  pointer-events: none;
+}
+
+.deleteBtn {
+  font-weight: var(--fontw-semibold);
+  color: var(--bg-blue);
+}
+
+.cartItemPrice {
+  font-weight: var(--fontw-semibold);
+}
+
+/**
+* checkout
+*/
+.checkout {
+  /*-img -details -price -gap*/
+  position: sticky;
+  top: 130px;
+  width: calc(100% - 200px - 500px - 60px - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: var(--bd);
+  border-radius: var(--bdr);
+  padding: 20px;
+  gap: 20px;
+}
+
+/*h3*/
+.checkout__heading {
+  font-weight: var(--fontw-semibold);
+  font-size: 24px;
+}
+
+/*checkout field .div*/
+.checkoutDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*one checkout field .div*/
+.checkoutDetail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkoutDetail h5 {
+  font-weight: normal;
+}
+
+.checkoutBtn {
+  width: 100%;
+  height: 50px;
+  background: var(--bg-blue);
+  text-align: center;
+  color: white;
+  border-radius: var(--bdr);
+}
+
+@media (min-width: 1440px) {
+  /**
+  * cart items .div
+  */
+  .cartItemsCheckout {
+    justify-content: space-around;
+  }
+
+  /**
+  * checkout
+  */
+  .checkout {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1120px) {
+  /*item's infors and price .div*/
+  .cartItemInfor{
+    flex-direction: column;
+  }
+
+  /*item's details*/
+  .cartItemDetails {
+    width: 350px;
+  }
+
+  /** 
+   * checkout
+   */
+  .checkout {
+    width: calc(100% - 200px - 350px - 10px);
+  }
+}
+
+@media (max-width: 1024px) {
+  /**
+  * cart items .div
+  */
+  .cartItemsCheckout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /** 
+   * checkout
+   */
+   .checkout {
+    width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  /**
+  * heading
+  */
+  .cart__heading {
+    padding: 0 10px;
+    padding-top: 10px;
+    font-size: var(--fonts24);
+    font-weight: var(--fontw-medium);
+  }
+
+  /**
+  * cart items .div
+  */
+  .cartItemsCheckout {
+    padding: 10px;
+  }
+
+  /*section*/
+  .cartItems {
+    width: 100%;
+  }
+
+  /*an item .div*/
+  .cartItem {
+    width: 100%;
+  }
+
+  /*item's infors and price .div*/
+  .cartItemInfor{
+    width: calc(100% - 110px);
+  }
+
+  /*item'cover container .div*/
+  .cartItemImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  /*item's details*/
+  .cartItemDetails {
+    width: 100%;
+  }
+
+  /** 
+   * checkout
+   */
+   .checkout {
+    width: 100%;
+  }
+}

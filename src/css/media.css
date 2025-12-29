@@ -1,0 +1,118 @@
+@media (max-width: 1270px) {
+  /**
+   * sidebar 
+   */
+  .sidebar {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menuBtn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header {
+    top: 0;
+  }
+
+  /*form*/
+  .searchForm {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    width: unset;
+  }
+  
+  main {
+    top: 100px;
+  }
+
+  /**
+   * sidebar 
+   */
+   .sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 200;
+    max-height: calc(100vh - 50px);
+    overflow-y: scroll;
+    background: var(--bg);
+    display: none;
+  }
+
+  .sidebar-display {
+    display: flex;
+  }
+
+  .sidebarBtn:nth-child(1) {
+    display: none;
+  }
+
+  .sidebarBtn:nth-child(2) {
+    border-top: var(--bd);
+  }
+
+  .footerUpper {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  /**
+   * header
+   */
+  /*logo's container*/
+  .headerLogo {
+    font-size: unset;
+    gap: 10px;
+  }
+
+  .logo__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /*header account, favorite, cart*/
+  .headerShop {
+    gap: 10px;
+  }
+
+  .shop__account {
+    font-size: var(--fonts12);
+  }
+
+  .heroNav {
+    padding: 0 10px;
+  }
+
+  .discountBtn {
+    right: 10px;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  /**
+   * header
+   */
+  .header {
+    padding: 0 10px;
+  }
+
+  /*form*/
+  .searchForm {
+    left: 10px;
+    right: 10px;
+  }
+
+  .heroNavSlide {
+    gap: 10px;
+  }
+}
