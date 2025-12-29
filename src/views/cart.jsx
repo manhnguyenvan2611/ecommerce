@@ -14,15 +14,16 @@ export default function Cart() {
   /**
    * cart display
    */
-  let cart = getCart();
-  let [cartHtml, setCartHtml] = useState(displayCart());
-  
+  let cart = getCart().reverse();
+
   if (cart == null) {
     cart = [];
   }
 
+  let [cartHtml, setCartHtml] = useState(displayCart());
+
   function displayCart() {
-    let cartHtml = cart.reverse().map(cartItem => {
+    let cartHtml = cart.map(cartItem => {
       let cartproduct = null;
   
       products.forEach(product => {
