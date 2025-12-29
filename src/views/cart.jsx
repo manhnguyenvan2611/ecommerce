@@ -14,10 +14,10 @@ export default function Cart() {
   /**
    * cart display
    */
-  let cart = getCart().reverse();
+  let cart = [];
 
-  if (cart == null) {
-    cart = [];
+  if (getCart() != null) {
+    cart = getCart().reverse();
   }
 
   let [cartHtml, setCartHtml] = useState(displayCart());
