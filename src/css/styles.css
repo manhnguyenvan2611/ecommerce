@@ -146,6 +146,7 @@ img {
   border: var(--bd);
   display: flex;
   align-items: center;
+  background: var(--bg);
 }
 
 /*select*/
