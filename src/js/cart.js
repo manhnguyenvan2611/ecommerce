@@ -50,6 +50,11 @@ export function saveCart(cart) {
 
 export function getCart() {
   let cart = JSON.parse(localStorage.getItem('cart'));
+
+  if (cart == null) {
+    cart = [];
+  }
+  
   return cart;
 }
 
